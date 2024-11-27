@@ -5,7 +5,10 @@ from controllers.publication_controller import publication_controller
 from controllers.interes_controller import interes_controller
 from controllers.evento_controller import evento_controller 
 from controllers.influencer_controller import influencer_controller
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)
 
 # Registrar Blueprints
 app.register_blueprint(usuario_bp, url_prefix='/api')
